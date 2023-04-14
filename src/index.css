@@ -1,11 +1,24 @@
+@import url('https://fonts.cdnfonts.com/css/tt-commons');
+@import url('https://fonts.cdnfonts.com/css/livvic');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --background-color-paper: rgb(246, 244, 241);
+  --background-color-cover: rgb(116, 73, 64);
+  
+  --color-redMark: rgb(220, 59, 79);
+  --color-salad: rgb(219, 236, 102);
+
+  --text-color-darkGray: rgb(66, 62, 58);
+
+  --font-familly-TTcommons: "TT commons", Helvetica, Arial, sans-serif;
+  --font-familly-livvic: "livvic", Helvetica, Arial, sans-serif;
+
+  --font-size-base: 25px;
+
+  font-family: var(--font-familly-TTcommons);
+  color: var(--text-color-darkGray);
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,56 +27,25 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+*{
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  font-family: var(--font-familly-TTcommons);
+  scroll-behavior: smooth;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+p{
+  font-size: var(--font-size-base);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h1{
+  font-size: calc(var(--font-size-base)*3);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+h2{
+  font-size: calc(var(--font-size-base)*2);
+}
+
+h3{
+  font-size: calc(var(--font-size-base)*1.5);
 }

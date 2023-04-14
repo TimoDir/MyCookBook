@@ -1,0 +1,21 @@
+.HomePage img{
+    width: 550px;
+    margin: -50px 0 150px 0;
+}
+
+.HomePage button{
+    height: 50px;
+    width: 170px;
+    border-radius: 15px;
+    border: 2px solid var(--text-color-darkGray);
+    color: var(--text-color-darkGray);
+    font-size: var(--font-size-base);
+}
+
+.HomePage button:hover, .HomePage button:focus{
+    border: 3px solid var(--text-color-darkGray);
+}
+
+.HomePage button:active{
+    border: 1px solid var(--text-color-darkGray);
+}
