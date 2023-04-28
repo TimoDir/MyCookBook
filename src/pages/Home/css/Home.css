@@ -1,0 +1,20 @@
+.HomePage img {
+  width: 550px;
+  margin: -50px 0 150px 0;
+}
+.HomePage button {
+  height: 50px;
+  width: 170px;
+  border-radius: 15px;
+  border: 2px solid rgb(66, 62, 58);
+  color: rgb(66, 62, 58);
+  font-size: 25px;
+}
+.HomePage button:hover, .HomePage button:focus {
+  border: 3px solid rgb(66, 62, 58);
+}
+.HomePage button:active {
+  border: 1px solid rgb(66, 62, 58);
+}
+
+/*# sourceMappingURL=Home.css.map */

@@ -1,0 +1,35 @@
+@use "../Variable/variable.scss" as *;
+@use "../Variable/font.scss" as *;
+
+:root {
+  font-family: $font-familly-TTcommons;
+  color: $text-color-darkGray;
+  line-height: 1.5;
+  font-weight: 400;
+
+  scroll-behavior: smooth;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  
+  p{
+    font-size: $font-size-base;
+  }
+  h1{
+    font-size: $font-size-base*3;
+  }
+  h2{
+    font-size: $font-size-base*2;
+  }
+  h3{
+    font-size: $font-size-base*1.5;
+  }
+}

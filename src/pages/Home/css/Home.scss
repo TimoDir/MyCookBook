@@ -1,0 +1,22 @@
+@use "../../../css/Variable/variable.scss" as *;
+
+.HomePage{
+    & img{
+        width: 550px;
+        margin: -50px 0 150px 0;
+    }
+    & button{
+        height: 50px;
+        width: 170px;
+        border-radius: 15px;
+        border: 2px solid $text-color-darkGray;
+        color: $text-color-darkGray;
+        font-size: $font-size-base;
+    }
+    & button:hover, button:focus{
+        border: 3px solid $text-color-darkGray;
+    }
+    &   button:active{
+        border: 1px solid $text-color-darkGray;
+    }
+}

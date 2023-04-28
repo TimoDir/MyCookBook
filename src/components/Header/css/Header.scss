@@ -1,13 +1,15 @@
+@use "../../../css/Variable/variable.scss" as *;
+
 nav{
     display: flex;
     flex-flow: row nowrap;
     height: 120px;
     text-align: center;
-}
-
-nav a{
-    text-decoration: none;
-    color: var(--background-color-paper);
+    
+    a{
+        text-decoration: none;
+        color: $background-color-paper;
+    }
 }
 
 .ArrowUp{
@@ -27,11 +29,11 @@ nav a{
     height: 100px;
     margin: 0 12px;
     padding: 15px 0 0 0;
-    background-color: var(--color-redMark);
+    background-color: $color-redMark;
     clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
     transition: 0.3s ease;
-}
 
-.BookMark:hover {
-    height: 120px;
+    &:hover {
+        height: 120px;
+    }
 }
