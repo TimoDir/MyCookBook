@@ -44,6 +44,7 @@ The app is built using the following technologies:
 - [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps
 - [React Router](https://reactrouter.com/en/main) - Declarative routing for React
 - [Vite](https://vitejs.dev/) - A build tool that aims to provide a faster and leaner development experience 🔥
+- [Sass](https://sass-lang.com/) - A CSS preprocessor that allows for more maintainable and scalable stylesheets by providing features such as variables, mixins, and nesting 🎨
 
 ### Folder Structure 🌳
 
@@ -53,6 +54,7 @@ The app is organized as follows:
 .
 ├── src/
 │   ├── components/
+│   ├── css/
 │   ├── pages/
 │   ├── store/
 │   ├── utils/
@@ -65,6 +67,7 @@ The app is organized as follows:
 ```
 
 - `src/components` - Contains reusable components used throughout the app.
+- `src/css` - Contains style for the index.jsx and App.jsx it also contain my reusable variable and font-familly variable.
 - `src/pages` - Contains the main pages of the app.
 - `src/store` - Contains the Redux store and related files.
 - `src/utils` - Contains utility functions used throughout the app.

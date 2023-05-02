@@ -1,10 +1,72 @@
 @use "../../../css/Variable/variable.scss" as *;
 
 .HomePage{
+    & .HomeWelcome{
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+
+        & .ParallaxContent{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+        }
+
+        & .ParalexBackground{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../../../utils/img/homeBackground.png);
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate3d(0, 50%, 0) scale(2);
+            animation: moveSlower 40s linear infinite;
+
+            @keyframes moveSlower {
+                0% {
+                  transform: translate3d(0, 150%, 0) scale(2);
+                }
+                100% {
+                  transform: translate3d(0, -140%, 0) scale(2);
+                }
+              }
+        }
+
+        & .ParalexForeground{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../../../utils/img/homeForeground.png);
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate3d(0, 50%, 0) scale(1);
+            z-index: 1;
+            animation: moveFaster 20s linear infinite;
+            @keyframes moveFaster {
+                0% {
+                  transform: translate3d(0, 150%, 0) scale(2);
+                }
+                100% {
+                  transform: translate3d(0, -125%, 0) scale(2);
+                }
+              }
+        }
+    }
+
     & img{
-        width: 550px;
+        width: 500px;
         margin: -50px 0 150px 0;
     }
+
     & button{
         height: 50px;
         width: 170px;
@@ -18,5 +80,22 @@
     }
     &   button:active{
         border: 1px solid $text-color-darkGray;
+    }
+}
+
+.HomeStep{
+    padding: 200px 20px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.30);
+        
+    & div{
+        padding: 200px 20px;
+        width: 75%;
+        &:nth-child(even){
+            text-align: left;
+            margin-left: 24%;
+        }
+        &:nth-child(odd){
+            text-align: left;
+        }
     }
 }
