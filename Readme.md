@@ -43,6 +43,7 @@ The app is built using the following technologies:
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 - [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps
 - [React Router](https://reactrouter.com/en/main) - Declarative routing for React
+- [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer) - A React component that adds a callback to observe the changes in the intersection of a target element with its container, useful for lazy-loading images or implementing infinite scrolling 🚀
 - [Vite](https://vitejs.dev/) - A build tool that aims to provide a faster and leaner development experience 🔥
 - [Sass](https://sass-lang.com/) - A CSS preprocessor that allows for more maintainable and scalable stylesheets by providing features such as variables, mixins, and nesting 🎨
 

@@ -22,7 +22,7 @@
   background-repeat: no-repeat;
   background-position: center;
   transform: translate3d(0, 50%, 0) scale(2);
-  animation: moveSlower 40s linear infinite;
+  animation: moveSlower 55s linear infinite;
 }
 @keyframes moveSlower {
   0% {
@@ -44,7 +44,7 @@
   background-position: center;
   transform: translate3d(0, 50%, 0) scale(1);
   z-index: 1;
-  animation: moveFaster 20s linear infinite;
+  animation: moveFaster 30s linear infinite;
 }
 @keyframes moveFaster {
   0% {
@@ -80,13 +80,12 @@
 .HomeStep div {
   padding: 200px 20px;
   width: 75%;
-}
-.HomeStep div:nth-child(even) {
+  transition: all 1s ease-in-out;
   text-align: left;
-  margin-left: 24%;
 }
 .HomeStep div:nth-child(odd) {
   text-align: left;
+  margin-left: 24%;
 }
 
 /*# sourceMappingURL=Home.css.map */
