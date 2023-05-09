@@ -7,18 +7,19 @@ export function AddRecipe(){
 
     const handleSubmit = (event) =>{
         event.preventDefault();
-        console.log(event.target[1].value);
-        console.log(event.target[2].value);
-        console.log(event.target[3].value);
-        console.log(event.target[4].value);
+        console.log(event.target[1].value); // title
+        console.log(event.target[2].value); // dish-type
+        console.log(event.target[3].value); // difficulty
+        console.log(event.target[4].value); // cost
+        event.target[5].value ? console.log(event.target[5].value) : console.log("no value"); // image-url
 
-        console.log(event.target[6].value);
-        console.log(event.target[7].value);
-        event.target[8].value ? console.log(event.target[8].value) : console.log("no value");
+        console.log(event.target[7].value); // Preparation
+        console.log(event.target[8].value); // Cooking time
+        event.target[9].value ? console.log(event.target[9].value) : console.log("no value"); // Rest time
         
-        let i = 10;
+        let i = 11;
         while(event.target[i].localName === "input"){
-            if(i === 10){
+            if(i === 11){
                 console.log(event.target[i].value); //ingredient
                 i++;
                 console.log(event.target[i].value); //quantity
@@ -26,12 +27,16 @@ export function AddRecipe(){
                 event.target[i].value ? console.log(event.target[i].value) : console.log("no value"); //unit
                 i++;
             };
+            if(!event.target[i].value){
+                break;
+            };
             console.log(event.target[i].value); //ingredient
             i++;
             console.log(event.target[i].value); //quantity
             i++;
             event.target[i].value ? console.log(event.target[i].value) : console.log("no value"); //unit
             i+=2;
+            console.log(i)
         };
 
         i+=2;
@@ -39,6 +44,7 @@ export function AddRecipe(){
             console.log(event.target[i].value); //step
             i+=2;
         };
+        console.log("--------- the end of the form ---------")
     }
     return(
         <>
@@ -46,8 +52,8 @@ export function AddRecipe(){
         <form onSubmit={handleSubmit} action="">
             <fieldset>
                 <legend><h4>General recipe info:</h4></legend>
-                <label for="title"><h4>Recipe name*: <input type="text" id="title" required/></h4></label>
-                <label for="Dish type"><h4>Dish type*: <select name="Dish type" id="Dish type" required>
+                <label for="title"><h4>Recipe name*: <input type="text" name="title" id="title" required/></h4></label>
+                <label for="dish-type"><h4>Dish type*: <select name="dish-type" id="dish-type" required>
                         <option value="Entree">Entree</option>
                         <option value="Main dish">Main dish</option>
                         <option value="Desert">Desert</option>
@@ -72,6 +78,7 @@ export function AddRecipe(){
                         <option value="Expensive">$$$</option>
                     </select>
                 </h4></label>
+                <label for="image-url"><h4>Image url link: <input type="url" name="image-url" id="image-url"/></h4></label>
             </fieldset>
             <fieldset>
                 <legend><h4>Time</h4></legend>
