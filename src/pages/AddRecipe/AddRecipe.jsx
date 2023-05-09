@@ -4,29 +4,50 @@ import { Add } from "./components/Add";
 
 
 export function AddRecipe(){
-    //create a components for the ingredients part:
-    const [idCount, setIdCount] = React.useState(1);
-    const [idIngredients, setIdIngredients] = React.useState(["ingredient0"]);
 
-    const handleAddIngredient = () =>{
-        setIdIngredients([...idIngredients, `ingredient${idCount}`]);
-        const newCount = idCount + 1;
-        setIdCount(newCount);
-        //console.log(idCount)
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+        console.log(event.target[1].value);
+        console.log(event.target[2].value);
+        console.log(event.target[3].value);
+        console.log(event.target[4].value);
+
+        console.log(event.target[6].value);
+        console.log(event.target[7].value);
+        event.target[8].value ? console.log(event.target[8].value) : console.log("no value");
+        
+        let i = 10;
+        while(event.target[i].localName === "input"){
+            if(i === 10){
+                console.log(event.target[i].value); //ingredient
+                i++;
+                console.log(event.target[i].value); //quantity
+                i++;
+                event.target[i].value ? console.log(event.target[i].value) : console.log("no value"); //unit
+                i++;
+            };
+            console.log(event.target[i].value); //ingredient
+            i++;
+            console.log(event.target[i].value); //quantity
+            i++;
+            event.target[i].value ? console.log(event.target[i].value) : console.log("no value"); //unit
+            i+=2;
+        };
+
+        i+=2;
+        while(event.target[i].localName === "textarea"){
+            console.log(event.target[i].value); //step
+            i+=2;
+        };
     }
-
-    const handleRemoveIngredient = (event) =>{
-        setIdIngredients(idIngredients.filter(id => id !== event.target.id))
-    }
-
     return(
         <>
         <h2>Add Recipe</h2>
-        <form action="">
+        <form onSubmit={handleSubmit} action="">
             <fieldset>
                 <legend><h4>General recipe info:</h4></legend>
                 <label for="title"><h4>Recipe name*: <input type="text" id="title" required/></h4></label>
-                <label for="Dish type"><h4>Dish type*: <select name="Dish type" required>
+                <label for="Dish type"><h4>Dish type*: <select name="Dish type" id="Dish type" required>
                         <option value="Entree">Entree</option>
                         <option value="Main dish">Main dish</option>
                         <option value="Desert">Desert</option>
@@ -60,7 +81,7 @@ export function AddRecipe(){
             </fieldset>
             <Add type="ingredient" />
             <Add type="step" />
-            <input type="submit" value="Submit" onSubmit={console.log(SubmitEvent)}/>
+            <input type="submit" value="Submit" />
         </form>
         </>
     )
