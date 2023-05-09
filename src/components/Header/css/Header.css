@@ -27,11 +27,10 @@ nav a {
   margin: 0 12px;
   padding: 15px 0 0 0;
   background-color: rgb(220, 59, 79);
-  clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 100%, 50% 75%, 0 100%, 0 0);
   transition: 0.3s ease;
 }
 .BookMark:hover {
   height: 120px;
-}
-
-/*# sourceMappingURL=Header.css.map */
+}/*# sourceMappingURL=Header.css.map */

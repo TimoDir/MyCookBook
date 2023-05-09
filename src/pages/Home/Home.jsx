@@ -5,15 +5,15 @@ import "./css/Home.css"
 
 export function Home(){
     // For each HomeStep child, we create a state that checks if an element is in the viewport using its reference and another that controls its style
-    const [ref1, HS1inView] = useInView({threshold: 0.2, triggerOnce:true});
+    const [ref1, HS1inView] = useInView({threshold: 0.3, triggerOnce:true});
     const [styleHS1, setStyleHS1] = React.useState({opacity: 0, marginLeft: "24%"});
-    const [ref2, HS2inView] = useInView({threshold: 0.2, triggerOnce:true});
+    const [ref2, HS2inView] = useInView({threshold: 0.3, triggerOnce:true});
     const [styleHS2, setStyleHS2] = React.useState({opacity: 0, marginLeft: "0%"});
-    const [ref3, HS3inView] = useInView({threshold: 0.2, triggerOnce:true});
+    const [ref3, HS3inView] = useInView({threshold: 0.3, triggerOnce:true});
     const [styleHS3, setStyleHS3] = React.useState({opacity: 0, marginLeft: "24%"});
-    const [ref4, HS4inView] = useInView({threshold: 0.2, triggerOnce:true});
+    const [ref4, HS4inView] = useInView({threshold: 0.3, triggerOnce:true});
     const [styleHS4, setStyleHS4] = React.useState({opacity: 0, marginLeft: "0%"});
-    const [ref5, HS5inView] = useInView({threshold: 0.2, triggerOnce:true});
+    const [ref5, HS5inView] = useInView({threshold: 0.3, triggerOnce:true});
     const [styleHS5, setStyleHS5] = React.useState({opacity: 0, marginLeft: "24%"});
     
     // By using the useEffect hook, we check if a child of HomeStep is in view and change its style accordingly

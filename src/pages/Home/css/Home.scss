@@ -92,10 +92,5 @@
         width: 75%;
         transition: all 1s ease-in-out;
         text-align: left;
-
-        &:nth-child(odd){
-            text-align: left;
-            margin-left: 24%;
-        }
     }
 }
