@@ -43,14 +43,14 @@ export function Home(){
                 <div className="ParallaxContent">
                     <img src="src\utils\img\MY COOK BOOK Welcom.png" alt="Welcome to My Cook Book website a cooking blog" />
                     <br />
-                    <button>Get Started</button>
+                    <a href="#HomeStep"><button>Get Started</button></a>
                 </div>
                 <div className="ParalexBackground"/>
                 <div className="ParalexForeground"/>
             </section>
 
 
-            <section className="HomeStep">
+            <section className="HomeStep" id="HomeStep">
                 {/* We use the state we created to add a reference that checks if elements are in the viewport, and if they are, we change their style and visibility  */}
                 <div className="HS1" ref={ref1} style={styleHS1}>
                     <h2>How does it work:</h2>

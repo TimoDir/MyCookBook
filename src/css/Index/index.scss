@@ -1,5 +1,5 @@
-@use "../Variable/variable.scss" as *;
-@use "../Variable/font.scss" as *;
+@use "../utils/variable.scss" as *;
+@use "../utils/font.scss" as *;
 
 :root {
   font-family: $font-familly-TTcommons;

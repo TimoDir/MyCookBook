@@ -1,1 +1,175 @@
-/*# sourceMappingURL=AddRecipe.css.map */
+@import url("https://fonts.cdnfonts.com/css/tt-commons");
+@import url("https://fonts.cdnfonts.com/css/livvic");
+.AddRecipe {
+  padding: 50px 0;
+}
+.AddRecipe h2 {
+  margin: 0 0 50px 0;
+}
+.AddRecipe h4 {
+  font-size: 20px;
+}
+.AddRecipe p {
+  font-size: 17.5px;
+}
+.AddRecipe input {
+  font-family: "TT commons", Helvetica, Arial, sans-serif;
+  color: rgb(66, 62, 58);
+  font-size: 17.5px;
+}
+.AddRecipe form {
+  margin: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-auto-rows: initial;
+  grid-template-areas: "General General General Time" "ingredient ingredient ingredient ingredient" "step step step step" "tags tags tags tags" "Submit Submit Submit Submit";
+  gap: 10px 10px;
+}
+.AddRecipe form fieldset {
+  text-align: left;
+  padding-bottom: 25px;
+}
+.AddRecipe form fieldset legend {
+  padding: 15px;
+}
+.AddRecipe form fieldset .form-container {
+  margin: 5px;
+}
+.AddRecipe form fieldset.General {
+  grid-area: General;
+}
+.AddRecipe form fieldset.General input {
+  width: 50%;
+}
+.AddRecipe form fieldset.General .Portion-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: initial;
+}
+.AddRecipe form fieldset.General .Portion-container input#portion-unit {
+  width: 300px;
+}
+.AddRecipe form fieldset.General .Radio-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: initial;
+}
+.AddRecipe form fieldset.General .Radio-container .Radio-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20px;
+}
+.AddRecipe form fieldset.Time {
+  grid-area: Time;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.AddRecipe form fieldset.ingredient {
+  grid-area: ingredient;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-areas: none;
+  gap: 10px 0;
+}
+.AddRecipe form fieldset.ingredient .ingredientRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-auto-rows: initial;
+  grid-template-areas: "ingredient-type quantity unit ingredient-del-btn";
+  gap: 0 5px;
+}
+.AddRecipe form fieldset.ingredient .ingredientRow .ingredient-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.AddRecipe form fieldset.ingredient .ingredientRow .ingredient-type {
+  grid-area: ingredient-type;
+}
+.AddRecipe form fieldset.ingredient .ingredientRow .quantity {
+  grid-area: quantity;
+}
+.AddRecipe form fieldset.ingredient .ingredientRow .unit {
+  grid-area: unit;
+}
+.AddRecipe form fieldset.ingredient .ingredientRow .ingredient-del-btn {
+  grid-area: ingredient-del-btn;
+}
+.AddRecipe form fieldset.step {
+  grid-area: step;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.AddRecipe form fieldset.step .step-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: initial;
+  margin: 15px 5px;
+  min-width: 100%;
+}
+.AddRecipe form fieldset.Form-tags {
+  grid-area: tags;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: initial;
+}
+.AddRecipe form fieldset textarea {
+  resize: none;
+  width: 80%;
+}
+.AddRecipe form fieldset button.delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: initial;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(143, 24, 38);
+  color: rgb(246, 244, 241);
+}
+.AddRecipe form fieldset button.delete-btn:hover, .AddRecipe form fieldset button.delete-btn:focus {
+  border: 2px solid black;
+}
+.AddRecipe form fieldset button.delete-btn:active {
+  border: 0.5px solid black;
+  font-weight: bold;
+}
+.AddRecipe form .Submit {
+  grid-area: Submit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: initial;
+}
+.AddRecipe form .add-btn {
+  width: 150px;
+  height: 40px;
+  margin: 20px auto;
+  border-radius: 15px;
+  font-family: "TT commons", Helvetica, Arial, sans-serif;
+  font-size: 17.5px;
+  border: 2px solid rgb(66, 62, 58);
+  color: rgb(66, 62, 58);
+}
+.AddRecipe form .add-btn:hover, .AddRecipe form .add-btn:focus {
+  border: 3px solid rgb(66, 62, 58);
+}
+.AddRecipe form .add-btn:active {
+  border: 1px solid rgb(66, 62, 58);
+}/*# sourceMappingURL=AddRecipe.css.map */

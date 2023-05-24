@@ -1,25 +1,27 @@
 export function Ingredient({id, rowNum, handleRemove}){
     return (
         <div className="ingredientRow" id={id}>
-            <div className="ingredient">
+            <div className="ingredient-info ingredient-type">
                 <label htmlFor={`ingredient${rowNum}`}>
-                    <span>ingredient*</span>
+                    <p>ingredient* :</p>
                     <input type="text" name={`ingredient${rowNum}`} id={`ingredient${rowNum}`} required/>
                 </label>
             </div>
-            <div className="quantity">
+            <div className="ingredient-info quantity">
                 <label htmlFor={`quantity${rowNum}`}>
-                    <span>quantity*</span>
+                    <p>quantity* :</p>
                     <input type="number" name={`quantity${rowNum}`} id={`quantity${rowNum}`} min="0" required/>
                 </label>
             </div>
-            <div className="unit">
+            <div className="ingredient-info unit">
                 <label htmlFor={`unit${rowNum}`}>
-                    <span>Unit</span>
+                    <p>Unit :</p>
                     <input type="text" name={`unit${rowNum}`} id={`unit${rowNum}`}/>
                 </label>
             </div>
-            {rowNum === 0 ? "" : <button id={id} onClick={handleRemove}>X</button>}
+            <div className="ingredient-info ingredient-del-btn">
+                {rowNum === 0 ? "" : <button className="delete-btn" id={id} onClick={handleRemove}>X</button>}
+            </div>
         </div>
     );
 };

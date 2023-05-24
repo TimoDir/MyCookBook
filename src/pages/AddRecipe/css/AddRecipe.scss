@@ -1,0 +1,161 @@
+@use "../../../css/utils/variable.scss" as *;
+@use "../../../css/utils/font.scss" as *;
+@use "../../../css/utils/mixins.scss" as *;
+
+.AddRecipe{
+    padding: 50px 0;
+    
+    & h2{
+        margin: 0 0 50px 0;
+    }
+    & h4{
+        font-size: $font-size-base *0.8;
+    }
+    & p{
+        font-size: $font-size-base *0.7;
+    }
+    & input{
+        font-family: $font-familly-TTcommons;
+        color: $text-color-darkGray;
+        font-size: $font-size-base *0.7;
+    }
+
+    & form{
+        margin: 0 10px;
+        @include grid-mixin(1fr 1fr 1fr 1fr, auto auto auto auto auto,
+            $gtAreas: 
+                "General General General Time"
+                "ingredient ingredient ingredient ingredient"
+                "step step step step"
+                "tags tags tags tags"
+                "Submit Submit Submit Submit",
+            $gap: 10px 10px,
+        );
+
+        & fieldset{
+            text-align: left;
+            padding-bottom: 25px;
+            //background-color: rgba(248, 200, 110, 0.24);
+            //border: none;
+
+            & legend{
+                padding: 15px;
+            }
+
+            & .form-container{
+                margin: 5px;
+            }
+
+            &.General{
+                grid-area: General;
+                & input{
+                    width: 50%;
+                }
+                & .Portion-container{
+                    @include flex-mixin($justCont: flex-start);
+                    & input#portion-unit{
+                        width: 300px;
+                    }
+                }
+                & .Radio-container{
+                    @include flex-mixin($justCont: space-around);
+                    & .Radio-option{
+                        @include flex-mixin($flexDirect: column);
+                        width: 20px;
+                    }
+                }
+            }
+
+            &.Time{
+                grid-area: Time;
+                @include flex-mixin($flexDirect: column, $justCont: space-around, $alignItems: flex-start)
+            }
+
+            &.ingredient{
+                grid-area: ingredient;
+                @include grid-mixin(1fr, 1fr, $gAutoRow: 1fr, $gap: 10px 0,);
+
+                & .ingredientRow{
+                    @include grid-mixin(1fr 1fr 1fr 0.5fr, 1fr, 
+                    $gtAreas: "ingredient-type quantity unit ingredient-del-btn", 
+                    $gap: 0 5px,);
+                    
+                    & .ingredient-info{
+                        @include flex-mixin($flexDirect: column);
+                    }
+
+                    & .ingredient-type{
+                        grid-area: ingredient-type;
+                    }
+                    & .quantity{
+                        grid-area: quantity;
+                    }
+                    & .unit{
+                        grid-area: unit;
+                    }
+                    & .ingredient-del-btn{
+                        grid-area: ingredient-del-btn;
+                        
+                    }
+                    
+                }
+            }
+            &.step{
+                grid-area: step;
+                @include flex-mixin($flexDirect: column);
+
+                & .step-container{
+                    @include flex-mixin($justCont: space-around);
+                    margin: 15px 5px;
+                    min-width: 100%;
+                }
+            }
+            &.Form-tags{
+                grid-area: tags;
+                @include flex-mixin();
+            }
+
+            & textarea{
+                        resize: none;
+                        width: 80%;
+            }
+
+            & button.delete-btn{
+                @include flex-mixin();
+                border: none;
+                width: 20px;
+                height: 20px;
+                background-color: $color-redDelete;
+                color: $background-color-paper ;
+                &:hover, &:focus{
+                    border: 2px solid black;
+                }
+                &:active{
+                    border: 0.5px solid black;
+                    font-weight: bold;
+                }
+            }
+        }
+        & .Submit{
+            grid-area: Submit;
+            @include flex-mixin();
+        }
+
+        & .add-btn{
+            width: 150px;
+            height: 40px;
+            margin: 20px auto;
+            border-radius: 15px;
+            font-family: $font-familly-TTcommons;
+            font-size: $font-size-base * 0.7;
+            border: 2px solid $text-color-darkGray;
+            color: $text-color-darkGray;
+            &:hover,&:focus{
+                border: 3px solid $text-color-darkGray;
+            }
+            &:active{
+                border: 1px solid $text-color-darkGray;
+            }
+        }
+    }
+}

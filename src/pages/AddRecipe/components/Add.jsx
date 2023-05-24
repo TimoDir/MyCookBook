@@ -7,7 +7,7 @@ export function Add ({type}){
     const [ids, setIds] = React.useState([`${type}0`]);
 
     const handleAdd = () =>{
-        setIds([...ids, `ingredient${idCount}`]);
+        setIds([...ids, `${type}${idCount}`]);
         const newCount = idCount + 1;
         setIdCount(newCount);
     }
@@ -17,7 +17,7 @@ export function Add ({type}){
     }
 
     return(
-        <fieldset>
+        <fieldset className={type}>
             <legend><h4>{type}s:</h4></legend>
             {ids.map((id, key) =>{
                 if(type === "ingredient"){
@@ -26,7 +26,7 @@ export function Add ({type}){
                     return <Step key={`step${key}`} id={id} rowNum={key} handleRemove={handleRemove} />;
                 };
             })}
-            <button onClick={handleAdd}>Add {type}</button>
+            <button className="add-btn" onClick={handleAdd}>Add {type}</button>
         </fieldset>
     );
 };

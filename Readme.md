@@ -24,7 +24,7 @@ To start the app, run the following command:
 npm run dev
 ```
 
-The app will be served at <http://localhost:3000> 🌐.
+The app will be served at <http://localhost:5173/> 🌐.
 
 ### Build the app 🛠️
 
