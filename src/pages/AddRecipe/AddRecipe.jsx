@@ -1,67 +1,22 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+//import { Link } from "react-router-dom";
 import { Add } from "./components/Add";
+import { action } from "../../store/store";
 import "./css/AddRecipe.css";
 
 
 export function AddRecipe(){
-
+    const selectRecipes = useSelector(state => state.recipes);
+    const dispatch = useDispatch();
     //extraction of the value in the form:
     const handleSubmit = (event) =>{
         event.preventDefault();
-        let i = 1;
-        console.log(event.target[i].value); // title
-        i++; // i=2
-        console.log(event.target[i].value); // dish-type
-        i++; // i=3
-        // portion num
-        i++; // i=4
-        // portion type
-        i++; // i=5 
-        let difficulty = [event.target[i], event.target[i+1], event.target[i+2]]
-        console.log(difficulty.filter(dif => dif.checked === true)[0].id); // difficulty
-        i+=3; // i=8
-        let cost = [event.target[i], event.target[i+1], event.target[i+2]]
-        console.log(cost.filter(cos => cos.checked === true)[0].id); // cost
-        i+=3; // i=11
-        event.target[i].value ? console.log(event.target[9].value) : console.log("no value"); // image-url
-        i+=2; // i=13
-        console.log(event.target[i].value); // Preparation
-        i++; // i=14
-        console.log(event.target[i].value); // Cooking time
-        i++; // i=15
-        event.target[i].value ? console.log(event.target[i].value) : console.log("no value"); // Rest time
-        i+=2; // i=17
-        while(event.target[i].localName === "input"){
-            if(i === 17){
-                console.log(event.target[i].value); //ingredient
-                i++;
-                console.log(event.target[i].value); //quantity
-                i++;
-                event.target[i].value ? console.log(event.target[i].value) : console.log("no value"); //unit
-                i++;
-            };
-            if(!event.target[i].value){
-                break;
-            };
-            console.log(event.target[i].value); //ingredient
-            i++;
-            console.log(event.target[i].value); //quantity
-            i++;
-            event.target[i].value ? console.log(event.target[i].value) : console.log("no value"); //unit
-            i+=2;
-        };
-
-        i+=2;
-        while(event.target[i].localName === "textarea"){
-            console.log(event.target[i].value); //step
-            i+=2;
-        };
-        i+=2;
-        event.target[i].value ? console.log(event.target[i].value) : console.log("no value"); //tags
-        console.log("--------- the end of the form ---------");
         //console.log(event);
-    }
+        dispatch(action.addRecipe(event.target));
+    };
+
+
     return(
         <div className="AddRecipe">
         <h2>Add Recipe</h2>
