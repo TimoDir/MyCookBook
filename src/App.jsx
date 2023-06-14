@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 import { Home } from './pages/Home/Home';
 import { AddRecipe } from './pages/AddRecipe/AddRecipe';
+import { RecipesList } from './pages/RecipesList/RecipesList';
 import './css/App/App.css';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='AddRecipe' element={<AddRecipe />} />
-        <Route path='RecipesList' element={<Home />} />
+        <Route path='RecipesList' element={<RecipesList />} />
         <Route path='MenuCreator' element={<Home />} />
       </Routes>
     </div>

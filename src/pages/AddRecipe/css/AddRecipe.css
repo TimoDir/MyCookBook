@@ -46,7 +46,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-direction: initial;
+  flex-flow: initial;
 }
 .AddRecipe form fieldset.General .Portion-container input#portion-unit {
   width: 300px;
@@ -55,13 +55,13 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: initial;
+  flex-flow: initial;
 }
 .AddRecipe form fieldset.General .Radio-container .Radio-option {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-flow: column;
   width: 20px;
 }
 .AddRecipe form fieldset.Time {
@@ -69,7 +69,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  flex-direction: column;
+  flex-flow: column;
 }
 .AddRecipe form fieldset.ingredient {
   grid-area: ingredient;
@@ -92,7 +92,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-flow: column;
 }
 .AddRecipe form fieldset.ingredient .ingredientRow .ingredient-type {
   grid-area: ingredient-type;
@@ -111,13 +111,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-flow: column;
 }
 .AddRecipe form fieldset.step .step-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: initial;
+  flex-flow: initial;
   margin: 15px 5px;
   min-width: 100%;
 }
@@ -126,7 +126,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: initial;
+  flex-flow: initial;
 }
 .AddRecipe form fieldset textarea {
   resize: none;
@@ -136,7 +136,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: initial;
+  flex-flow: initial;
   border: none;
   width: 20px;
   height: 20px;
@@ -155,7 +155,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: initial;
+  flex-flow: initial;
 }
 .AddRecipe form .add-btn {
   width: 150px;

@@ -60,7 +60,7 @@
                 & .Radio-container{
                     @include flex-mixin($justCont: space-around);
                     & .Radio-option{
-                        @include flex-mixin($flexDirect: column);
+                        @include flex-mixin($flexFlow: column);
                         width: 20px;
                     }
                 }
@@ -68,7 +68,7 @@
 
             &.Time{
                 grid-area: Time;
-                @include flex-mixin($flexDirect: column, $justCont: space-around, $alignItems: flex-start)
+                @include flex-mixin($flexFlow: column, $justCont: space-around, $alignItems: flex-start)
             }
 
             &.ingredient{
@@ -81,7 +81,7 @@
                     $gap: 0 5px,);
                     
                     & .ingredient-info{
-                        @include flex-mixin($flexDirect: column);
+                        @include flex-mixin($flexFlow: column);
                     }
 
                     & .ingredient-type{
@@ -102,7 +102,7 @@
             }
             &.step{
                 grid-area: step;
-                @include flex-mixin($flexDirect: column);
+                @include flex-mixin($flexFlow: column);
 
                 & .step-container{
                     @include flex-mixin($justCont: space-around);

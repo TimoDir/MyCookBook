@@ -12,7 +12,7 @@ export function AddRecipe(){
     //extraction of the value in the form:
     const handleSubmit = (event) =>{
         event.preventDefault();
-        //console.log(event);
+        console.log(event);
         dispatch(action.addRecipe(event.target));
     };
 
@@ -34,14 +34,14 @@ export function AddRecipe(){
                     <label htmlFor="dish-type"><h4>Dish type*:</h4></label> 
                     <select name="dish-type" id="dish-type" required>
                         <option value="Entree">Entree</option>
-                        <option value="Main dish">Main dish</option>
+                        <option value="MainDish">Main dish</option>
                         <option value="Desert">Desert</option>
-                        <option value="Side dish">Side dish</option>
+                        <option value="SideDish">Side dish</option>
                         <option value="Appetizer">Appetizer</option>
                         <option value="Sauce">Sauce</option>
                         <option value="Beverage">Beverage</option>
                         <option value="Confectionery">Confectionery</option>
-                        <option value="Utility/other">Utility/other</option>
+                        <option value="Utility">Utility/other</option>
                     </select>
                 </div>
 
@@ -81,13 +81,13 @@ export function AddRecipe(){
                         <h4>Cost*:</h4>
                         <div className="Radio-container">
                             <div className="Radio-option">
-                                <label htmlFor="Cheap">$ </label><input type="radio" name="Cost" id="Cheap" defaultChecked/>
+                                <label htmlFor="LowCost">$ </label><input type="radio" name="Cost" id="LowCost" defaultChecked/>
                             </div>
                             <div className="Radio-option">
-                                <label htmlFor="Ordinary">$$ </label><input type="radio" name="Cost" id="Ordinary" />
+                                <label htmlFor="ModerateCost">$$ </label><input type="radio" name="Cost" id="ModerateCost" />
                             </div>
                             <div className="Radio-option">
-                                <label htmlFor="Expensive">$$$ </label><input type="radio" name="Cost" id="Expensive" />
+                                <label htmlFor="HighCost">$$$ </label><input type="radio" name="Cost" id="HighCost" />
                             </div>
                         </div>               
                     </div>

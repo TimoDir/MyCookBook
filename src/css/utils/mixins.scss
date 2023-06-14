@@ -7,9 +7,9 @@
     gap: $gap;
 }
 
-@mixin flex-mixin($justCont: center, $alignItems: center, $flexDirect: initial){
+@mixin flex-mixin($justCont: center, $alignItems: center, $flexFlow: initial){
     display: flex;
     justify-content: $justCont;
     align-items: $alignItems;
-    flex-direction: $flexDirect;
+    flex-flow: $flexFlow;
 }

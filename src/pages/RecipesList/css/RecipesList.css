@@ -1,0 +1,79 @@
+.RecipesList {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-auto-rows: initial;
+  grid-template-areas: ". SearchBar SearchBar ." ". Recipes Recipes ." ". Recipes Recipes .";
+  gap: 10px 10px;
+}
+.RecipesList .SearchBar {
+  grid-area: SearchBar;
+}
+.RecipesList .RecipesContainer {
+  grid-area: Recipes;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.RecipesList .RecipesContainer .RecipeCard {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 40px 75px 300px 75px;
+  grid-auto-rows: initial;
+  grid-template-areas: "Title Title " "Time Difficulty " "Image Image" "Tags Tags";
+  gap: 2px 2px;
+  margin: 10px;
+  border: solid 2px rgba(220, 59, 79, 0.5);
+  border-radius: 10px;
+}
+.RecipesList .RecipesContainer .RecipeCard .RecipeTitle {
+  grid-area: Title;
+  background-color: rgba(220, 59, 79, 0.5);
+  font-size: 25px;
+}
+.RecipesList .RecipesContainer .RecipeCard .RecipeDifficulty {
+  grid-area: Difficulty;
+}
+.RecipesList .RecipesContainer .RecipeCard .CardInfo ul {
+  list-style: none;
+  text-align: left;
+  padding-left: 5px;
+}
+.RecipesList .RecipesContainer .RecipeCard .RecipeRecipeTimeTitle {
+  grid-area: Time;
+}
+.RecipesList .RecipesContainer .RecipeCard .RecipeImg {
+  grid-area: Image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: initial;
+  border-top: solid 1px rgba(220, 59, 79, 0.5);
+  border-bottom: solid 1px rgba(220, 59, 79, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.RecipesList .RecipesContainer .RecipeCard .RecipeTags {
+  grid-area: Tags;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+.RecipesList .RecipesContainer .RecipeCard .RecipeTags button {
+  padding: 5px;
+  border: none;
+  background-color: none;
+  color: blue;
+  font-size: 14px;
+  cursor: pointer;
+}
+.RecipesList .RecipesContainer .RecipeCard .RecipeTags button:hover, .RecipesList .RecipesContainer .RecipeCard .RecipeTags button:focus {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+.RecipesList .RecipesContainer .RecipeCard .RecipeTags button:active {
+  background-color: rgba(128, 128, 128, 0.5);
+}/*# sourceMappingURL=RecipesList.css.map */
