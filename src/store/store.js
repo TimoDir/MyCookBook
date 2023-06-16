@@ -6,9 +6,12 @@ import { recipes } from "./data";
 
 const initialState = {
     recipes: recipes,
-    AllTags: ["#FlatFood", "#FrenchFood", "#FingerFood", "#Sweet", "#Desert", "#Easy", "#Medium",
-    "#AsianFood", "#BreadBasedFood", "#Main dish", 
-    "#ItalianFood", "#Chicken", "#Sauce", "#Cheap", "#Ordinary"],
+    AllTags: [
+        "#Entree", "#MainDish", "#Desert", "#SideDish", "#Appetizer", "#Sauce", "#Beverage", "#Confectionery", "#Utility",
+        "#Easy", "#Medium", "#Difficult",
+        "#LowCost", "#ModerateCost", "#HighCost",
+        "#FlatFood", "#FrenchFood", "#FingerFood", "#Sweet", "#AsianFood", "#BreadBasedFood", "#ItalianFood", "#Chicken",
+    ],
 }
 
 const blankRecipe = {
@@ -37,14 +40,14 @@ const removeRecipe = (idRecipe) =>{
     return {type:'removeRecipe', payload: idRecipe }
 };
 
-const addTags = (tagList) =>{
+const addAllTags = (tagList) =>{
     return {type:'addTags', payload: tagList}
 };
 
 export const action = {
     addRecipe: addRecipe,
     removeRecipe: removeRecipe,
-    addTags: addTags,
+    addAllTags: addAllTags,
 }
 
 // Reducer
