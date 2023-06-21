@@ -73,9 +73,9 @@ const cookBookReducer = (state = initialState, action) =>{
                     if(action.payload[i].checked){
                         recipe.difficulty = action.payload[i].id;
                     };
-                } else if(action.payload[i].id === "Cheap" ||           // extract Cost
-                action.payload[i].id === "Ordinnary" || 
-                action.payload[i].id === "Expensive"){
+                } else if(action.payload[i].id === "LowCost" ||           // extract Cost
+                action.payload[i].id === "ModerateCost" || 
+                action.payload[i].id === "HighCost"){
                     if(action.payload[i].checked){
                         recipe.cost = action.payload[i].value;
                     };
