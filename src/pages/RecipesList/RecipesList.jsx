@@ -113,10 +113,10 @@ export const RecipesList = () =>{
 
                                 <div className="RecipeDifficulty CardInfo">
                                     <ul>
-                                        <li key={`difficulty${recipe.title}`}>
+                                        <li key ={"difficulty" + recipe.id}>
                                             Difficutly: {recipe.difficulty}
                                         </li>
-                                        <li key={`cost${recipe.title}`}>
+                                        <li key={`cost${recipe.id}`}>
                                             Cost: {recipe.cost}
                                         </li>
                                     </ul>
@@ -124,13 +124,13 @@ export const RecipesList = () =>{
 
                                 <div className="RecipeTime CardInfo">
                                     <ul>
-                                        <li key={`Prep${recipe.title}`}>
+                                        <li key={`Prep${recipe.id}`}>
                                             Prep. time: {recipe.Preparation}
                                         </li>
-                                        <li key={`Cook${recipe.title}`}>
+                                        <li key={`Cook${recipe.id}`}>
                                             Cook. time: {recipe.CookingTime}
                                         </li>
-                                        {recipe.RestTime && <li key={`Rest${recipe.title}`}>Rest time: {recipe.RestTime}</li>}
+                                        {recipe.RestTime && <li key={`Rest${recipe.id}`}>Rest time: {recipe.RestTime}</li>}
                                     </ul>
                                 </div>
 
@@ -144,7 +144,6 @@ export const RecipesList = () =>{
                     )})
                 }
             </div>
-            
     </div>
     )
 }

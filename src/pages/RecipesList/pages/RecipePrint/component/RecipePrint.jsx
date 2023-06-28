@@ -51,9 +51,9 @@ class RecipePrint extends React.Component{
                 </div>
                 <div className="Steps">
                     <ul>
-                        {recipe.steps.map(step =>
-                            <li key={`${step}${step.length}`}>
-                                <p>{step}</p>
+                        {recipe.steps.map((step, key) =>
+                            <li key={`${key}${step.step.length}`}>
+                                <p>{step.step}</p>
                             </li>    
                         )}
                     </ul>

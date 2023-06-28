@@ -50,10 +50,10 @@ export const recipes = [
             }
         ],
         steps: [
-            "Mix the eggs, melted butter, rhum, and one glass of milk together.",
-            "Add the floor and the salt and mix it until it's a homogenous dough. And add the rest of the milk and mix until the batter is well incorporated into the milk.",
-            "Prepare a flat pan (or two), some oil, and use a tissue or a brush to gently oil the pan. Put your pan on the stove and when the pan is hot you can pour the batter into a pan. Tilt the pan so that the dough is on the entire flat surface of the pan. Repeat the process until there is no more dough.",
-            "Enjoy your crepes with jam, Nutella, fruits, coco flakes... etc. Or do the traditional Crepes flambé with sugar, Grand Marnier, and light it on fire! :D "
+            {step: "Mix the eggs, melted butter, rhum, and one glass of milk together."},
+            {step: "Add the floor and the salt and mix it until it's a homogenous dough. And add the rest of the milk and mix until the batter is well incorporated into the milk."},
+            {step: "Prepare a flat pan (or two), some oil, and use a tissue or a brush to gently oil the pan. Put your pan on the stove and when the pan is hot you can pour the batter into a pan. Tilt the pan so that the dough is on the entire flat surface of the pan. Repeat the process until there is no more dough."},
+            {step: "Enjoy your crepes with jam, Nutella, fruits, coco flakes... etc. Or do the traditional Crepes flambé with sugar, Grand Marnier, and light it on fire! :D "},
         ],
         tags: [
             "#FlatFood",
@@ -63,7 +63,8 @@ export const recipes = [
             "#Desert",
             "#Easy",
             "#LowCost"
-        ]
+        ],
+        id: "CrepesFrenchpancake1687437640780"
     },
     {
         title: "Baozi Pan",
@@ -126,12 +127,12 @@ export const recipes = [
             }
         ],
         steps: [
-            "Preparation of the dough: \nWarm the water and mix it with the yeast. Then, add the flour and 2 teaspoons of sunflower oil to the mixture. Knead the dough for approximately 5 minutes until it becomes smooth and elastic. Shape the dough into a ball and let it rest for at least half an hour, allowing it to rise and develop flavor.",
-            "Preparation of the stuffing: \nFor the minced meat, you can choose your favorite type of meat such as pork, beef, duck, or any other preferred option. Start by mincing the slices of ginger and the green onion, and then add them to the meat. Next, incorporate 2 tablespoons of soy sauce, 1 tablespoon of oyster sauce, and 1 tablespoon of oil (sunflower or sesame) into the mixture. Thoroughly mix everything together and allow it to sit for a while to allow the flavors to blend.",
-            "Preparation of the Baozi:\nTo achieve approximately equal amounts of dough, Roll out the dough into a log shape. Cut the log of dough into two equal parts. Take each of the two parts and divide them into two equal parts, resulting in four pieces of dough. Now, take each of the four pieces and divide them into three equal parts, resulting in a total of twelve pieces of dough, each approximately the same size.",
-            "Roll out each piece of dough to achieve circles approximately 10 cm in diameter. Next, place a tablespoon of the stuffing preparation in the center of each circle. Fold the dough over the stuffing, shaping it into a chestnut-like shape.",
-            "The cooking: \nIn a generously oiled pan over medium heat, add the Baozi and cook for approximately 1 minute. Then, add 130g of water to the pan and cover it. Allow the Baozi to cook for approximately 10 minutes or until they are cooked through. Congratulations, they are now ready to be enjoyed!",
-            "Note: this recipe is from Le riz jaune here is a link to the video: https://www.tiktok.com/@lerizjaune/video/7190792253378497798"
+            {step: "Preparation of the dough: \nWarm the water and mix it with the yeast. Then, add the flour and 2 teaspoons of sunflower oil to the mixture. Knead the dough for approximately 5 minutes until it becomes smooth and elastic. Shape the dough into a ball and let it rest for at least half an hour, allowing it to rise and develop flavor."},
+            {step: "Preparation of the stuffing: \nFor the minced meat, you can choose your favorite type of meat such as pork, beef, duck, or any other preferred option. Start by mincing the slices of ginger and the green onion, and then add them to the meat. Next, incorporate 2 tablespoons of soy sauce, 1 tablespoon of oyster sauce, and 1 tablespoon of oil (sunflower or sesame) into the mixture. Thoroughly mix everything together and allow it to sit for a while to allow the flavors to blend."},
+            {step: "Preparation of the Baozi:\nTo achieve approximately equal amounts of dough, Roll out the dough into a log shape. Cut the log of dough into two equal parts. Take each of the two parts and divide them into two equal parts, resulting in four pieces of dough. Now, take each of the four pieces and divide them into three equal parts, resulting in a total of twelve pieces of dough, each approximately the same size."},
+            {step:"Roll out each piece of dough to achieve circles approximately 10 cm in diameter. Next, place a tablespoon of the stuffing preparation in the center of each circle. Fold the dough over the stuffing, shaping it into a chestnut-like shape."},
+            {step:"The cooking: \nIn a generously oiled pan over medium heat, add the Baozi and cook for approximately 1 minute. Then, add 130g of water to the pan and cover it. Allow the Baozi to cook for approximately 10 minutes or until they are cooked through. Congratulations, they are now ready to be enjoyed!"},
+            {step: "Note: this recipe is from Le riz jaune here is a link to the video: https://www.tiktok.com/@lerizjaune/video/7190792253378497798"} 
         ],
         tags: [
             "#AsianFood",
@@ -139,7 +140,8 @@ export const recipes = [
             "#MainDish",
             "#Medium",
             "#LowCost"
-        ]
+        ],
+        id: "BaoziPan1687437598940"
     },
     {
         title: "Tuscan chicken",
@@ -219,6 +221,7 @@ export const recipes = [
             "#MainDish",
             "#Easy",
             "#ModerateCost"
-        ]
+        ],
+        id:'Tuscanchicken1687437544045'
     }
 ]
